@@ -1,4 +1,4 @@
-import { FC, ReactElement } from "react";
+import { FC } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -25,8 +25,8 @@ const Slider: FC<ISlider> = ({ spaceBetween, slidesPerView, slides }) => {
 
     // when window width is >= 993px
     993: {
-      slidesPerView: 4,
-      spaceBetween: 30,
+      slidesPerView: slidesPerView,
+      spaceBetween: spaceBetween,
     },
   };
 
