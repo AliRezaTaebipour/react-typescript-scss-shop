@@ -1,0 +1,71 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.section {
+    &__container {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+
+        @include screen-md {
+            margin: 0 5px;
+        }
+    }
+
+    &__logo {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        margin-right: 50px;
+
+        @include screen-md {
+            display: none;
+        }
+    }
+
+    &__logoImg {
+        width: 85px;
+        cursor: pointer;
+    }
+
+    &__menu {
+        flex: 1;
+
+        @include screen-md {
+            display: none;
+        }
+    }
+
+    &__mobileMenu {
+        flex: 1;
+        text-align: left;
+        display: none;
+
+        svg {
+            width: 19px;
+            padding: 5px;
+            border-radius: 3px;
+            fill: $color-white;
+            background: $color-primary;
+        }
+
+        @include screen-md {
+            display: block;
+            position: relative;
+            bottom: 3px;
+        }
+    }
+}
+
+.topbar {
+    background-color: $color-second-white;
+    padding: 10px 0;
+    font-size: 13px;
+    text-align: left;
+
+    &__text {
+        @include screen-md {
+            padding-left: 5px;
+        }
+    }
+}

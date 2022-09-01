@@ -1,0 +1,41 @@
+// Extra small devices
+@mixin screen-xxs() {
+    @media (max-width: $media-xxs) {
+        @content;
+    }
+}
+
+// Small devices
+@mixin screen-xs() {
+    @media (max-width: $media-xs) {
+        @content;
+    }
+}
+
+// Medium devices
+@mixin screen-sm() {
+    @media (max-width: $media-sm) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin screen-md() {
+    @media (max-width: $media-md) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin screen-lg() {
+    @media (max-width: $media-lg) {
+        @content;
+    }
+}
+
+// wrapper size
+@mixin screen-wr() {
+    @media (max-width: $media-wr) {
+        @content;
+    }
+}

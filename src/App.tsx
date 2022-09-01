@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { FC } from "react";
+import "./App.scss";
+import Layout from "./components/Layout";
+import Slider from "./components/Swiper";
+import { SlideShow } from "./components/SlideShow";
+import TopCcategories from "./components/TopCcategories";
+import AboutUs from "./components/AboutUs";
+import { Product } from "./components/Product";
+import Wrapper from "./components/Wrapper";
 
-function App() {
+const App: FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <div>
+          <Slider slides={SlideShow()} slidesPerView={1} spaceBetween={0} />
+        </div>
+        <div>
+          <AboutUs />
+        </div>
+        <div>
+          <TopCcategories />
+        </div>
+        <div>
+          <Wrapper>
+            <Slider slides={Product()} slidesPerView={4} spaceBetween={30} />
+          </Wrapper>
+        </div>
+      </Layout>
     </div>
   );
-}
+};
 
 export default App;

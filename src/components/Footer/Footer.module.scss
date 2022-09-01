@@ -1,0 +1,56 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.container {
+    margin: 70px auto 0;
+
+    &__top {
+        background: $color-smooth-white;
+        padding: 50px 0 40px;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include screen-md {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    &__col {
+        text-align: justify;
+        max-width: 500px;
+
+        @include screen-md {
+            max-width: 100%;
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        color: $color-black;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    &__desc {
+        font-size: 15px;
+        line-height: 24px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-primary;
+        font-weight: bold;
+    }
+
+    &__bottom {
+        padding: 15px 0;
+        font-size: 14px;
+    }
+}

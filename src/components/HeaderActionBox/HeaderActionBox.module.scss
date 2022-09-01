@@ -1,0 +1,23 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.actions {
+    display: flex;
+
+    @include screen-md {
+        margin-right: 10px;
+    }
+
+    &__item {
+        margin-left: 22px;
+
+        @include screen-md {
+            margin-left: 10px;
+        }
+    }
+
+    &__icon {
+        width: 25px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+
+    &__number {
+        background: $color-primary;
+        color: $color-white;
+        position: absolute;
+        right: -7px;
+        top: -3px;
+        width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 12px;
+        line-height: normal;
+        z-index: 10;
+    }
+
+    &__icon {
+        width: 25px;
+
+        svg {
+            width: 25px;
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px auto;
+
+    @include screen-md {
+        flex-direction: column;
+    }
+}
+
+.banner {
+    flex: 1;
+    max-width: 360px;
+
+    &__img {
+        width: 100%;
+        filter: grayscale(100%);
+        cursor: pointer;
+        transition: all 0.7s ease-in-out;
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+
+    &__label {
+        text-align: center;
+        position: relative;
+        top: -70px;
+        width: 150px;
+        background: rgba(135, 135, 135, 0.72);
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: $color-white;
+        transition: all 0.7s ease-in-out;
+        opacity: 0;
+    }
+
+    &:hover {
+        .banner__label {
+            opacity: 1;
+        }
+    }
+}

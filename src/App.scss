@@ -2,9 +2,17 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+  z-index: 10;
+}
+
+.ReactModal__Content.ReactModal__Content--after-open {
+  z-index: 999;
+  background-color: #fff !important;
+  -webkit-box-shadow: 0 0 3px #b09a9a;
+  box-shadow: 0 0 3px #b09a9a;
+  padding: 23px 30px 30px !important;
+  border: none !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
